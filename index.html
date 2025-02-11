@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      (function() {
+        // Replace with your EmailJS public key
+        emailjs.init("CRmNO5sMSlMwEoZLR");
+      })();
+    </script>
+    <!-- =============================================
+         NAVIGATION SECTION
+         - Desktop Navigation
+         - Mobile Navigation with Hamburger Menu
+         ============================================= -->
+    <!-- Desktop Navigation Bar -->
+    <nav id="desktop-nav">
+      <!-- Logo/Home Link -->
+      <div class="logo">
+        <a href="#profile"><img src="assets/Casbadillo.png" alt="My Logo"></a>
+      </div>
+      <!-- Navigation Menu -->
+      <div>
+        <ul class="nav-links">
+          <li><a href="#profile">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certificate">Certificate</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation (Hamburger Menu) -->
+    <nav id="hamburger-nav">
+      <!-- Mobile Logo/Home Link -->
+      <div class="logo">
+        <a href="#profile"><img src="assets/Casbadillo.png" alt="My Logo"></a>
+      </div>
+      <!-- Hamburger Menu Container -->
+      <div class="hamburger-menu">
+        <!-- Hamburger Icon (Three Lines) -->
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- Mobile Menu Links -->
+        <div class="menu-links">
+          <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#certificate" onclick="toggleMenu()">Certificate</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =============================================
+     HERO/PROFILE SECTION
+     - Profile Picture
+     - Introduction
+     - CTA Buttons
+     - Social Links
+     ============================================= -->
+
+    <!-- Profile/Hero Section -->
+    <section id="profile">
+      <!-- Profile Picture Container -->
+      <div class="section__pic-container">
+        <img src="./assets/MyProfile.png" alt="EJ Casbadillo profile picture" />
+      </div>
+      
+      <!-- Profile Text Content -->
+      <div class="section__text">
+        <!-- Introduction Text -->
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Errol Justine C. Casbadillo</h1>
+        <p class="section__text__p2">Aspiring Full-Stack Web Developer</p>
+        
+        <!-- Call-to-Action Buttons -->
+        <div class="btn-container">
+          <!-- Download CV Button -->
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Errol_Justine_Casbadillo_Resume.pdf')"
+          >
+            Download CV
+          </button>
+          <!-- Contact Info Button -->
+          <button class="btn btn-color-1" onclick="location.href='#contact';">
+            Contact Info
+          </button>
+        </div>
+        
+        <!-- Social Media Links -->
+        <div id="socials-container">
+          <!-- LinkedIn Profile Link -->
+          <img
+          src="./assets/linkedin.png"
+          alt="My LinkedIn profile"
+          class="icon"
+          onclick="window.open('https://www.linkedin.com/in/errol-justine-casbadillo-295506312/', '_blank')"
+          />
+      
+          <!-- GitHub Profile Link -->
+          <img
+          src="./assets/github.png"
+          alt="My Github profile"
+          class="icon"
+          onclick="window.open('https://github.com/Jayeeh', '_blank')"
+          />
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+     ABOUT SECTION
+     - Personal Info
+     - Experience Details
+     - Education Details
+     - Skills Overview
+     ============================================= -->
+
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/Aboutme2.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>10+ years <br />Hotel Manager, Office and IT Staff</p>
+            </div>
+            
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelors Degree<br />Information Technology</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Enthusiastic Web Developer with a basic understanding of front-end and back-end technologies. Familiar with HTML, CSS, PHP, JavaScript, Node.js, Express.js, and TypeScript. Currently learning modern frameworks like React.JS and TypeScript. Experienced in using Git and GitHub for version control. Eager to create dynamic and responsive web applications while continuously learning and growing in the field.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+     EXPERIENCE SECTION
+     - Frontend Skills
+     - Backend Skills
+     - Technical Expertise
+     ============================================= -->
+
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Front-end and Back-end Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/html2.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experience</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/css.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/bootstrap.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Bootstrap</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/tailwind.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Tailwind</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+
+              <article>
+                <img
+                  src="./assets/js.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/reactjs.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/nodejs.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/express.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/typescript.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/Nestjs.svg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Nest JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/php.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PHP</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/laravel.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Laravel</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/MySQL.svg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/PostgreSQL.svg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/mongoDB2.svg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MongoDB</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src="./assets/sql-server.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL & NoSQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <div class="details-container">
+            <h2 class="experience-sub-title">Code Editor and Tools</h2>
+            <div class="article-container">
+
+              <article>
+                <img
+                  src="./assets/windsurf-logo.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Windsurf</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/visual-studio.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Visual Studio</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/Canva.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Canva</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/github2.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git & Github</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/claude.svg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Claude AI</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/docker.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Docker</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/v0.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>V0 by Vercel</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/Trello.svg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Trello</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/Notion.svg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Notion</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/Slack.svg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Slack</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+     CERTIFICATES SECTION 
+     - Certificate Showcase
+     - QR Code and Links
+     - Download
+     ============================================= -->
+
+     <section id="certificate">
+      <p class="section__text__p1">View and Browse My</p>
+      <h1 class="title">Certificates</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Frontend Cert.png"
+                alt="Project 1"
+                class="project-img-2"
+              />
+            </div>
+            <!-- <h2 class="experience-sub-title project-title">Front-End Development</h2> -->
+            <h3 >Mimo QR</h3>
+            <h4 >Professional Certificate</h4>
+            <h2 >Front-End Development</h2>
+            <div class="btn-container">
+              <button 
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://www.virtualbadge.io/certificate-validator?credential=428b28f5-f0df-4172-8ee5-62ed4605b23b', '_blank')"
+              >
+                View Certificate
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/Frontend.pdf')"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Backend_QR.png"
+                alt="Project 2"
+                class="project-img-2"
+              />
+            </div>
+            <!-- <h2 class="experience-sub-title project-title">Back-End Development</h2> -->
+            <h3 >Mimo QR</h3>
+            <h4 >Professional Certificate</h4>
+            <h2 >Back-End Development</h2>
+            <div class="btn-container">
+              <button 
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://www.virtualbadge.io/certificate-validator?credential=6560400a-4a84-4481-b380-b22996bf5d0f', '_blank')"
+              >
+                View Certificate
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/Backend.pdf')"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Fullstack_QR.png"
+                alt="Project 3"
+                class="project-img-2"
+              />
+            </div>
+            <!-- <h2 class="experience-sub-title project-title">Full-Stack Web Development</h2> -->
+            <h3 >Mimo QR</h3>
+            <h4 >Professional Certificate</h4>
+            <h2 >Full-Stack Development</h2>
+            <div class="btn-container">
+              <button 
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://www.virtualbadge.io/certificate-validator?credential=adc6eecb-a192-4e32-9779-6d966b7c5229', '_blank')"
+              >
+                View Certificate
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/FullStack.pdf')"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+     PROJECTS SECTION
+     - Project Showcase
+     - Live Demos
+     - GitHub Links
+     ============================================= -->
+
+     <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Note-App.png"
+                alt="MERN Stack Note Application"
+                class="project-img"
+                onclick="openModal(this.src)"
+              />
+            </div>
+            <div class="tech-stack">
+              <img src="./assets/html2.png" alt="HTML" class="tech-icon" title="HTML">
+              <img src="./assets/css.png" alt="CSS" class="tech-icon" title="CSS">
+              <img src="./assets/js.png" alt="JavaScript" class="tech-icon" title="JavaScript">
+              <img src="./assets/reactjs.png" alt="React.JS" class="tech-icon" title="React.JS">
+              <img src="./assets/mongoDB2.svg" alt="MongoDB" class="tech-icon" title="MongoDB">
+              <img src="./assets/express.png" alt="Express" class="tech-icon" title="Express">
+              <img src="./assets/nodejs.png" alt="Node.JS" class="tech-icon" title="Node.JS">
+            </div>
+            <h2>MERN Stack: Note Application</h2>
+            <div class="btn-container">
+              <button 
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/Jayeeh/basic-library-system', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='404.html'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/NestJS-ToDoList.png"
+                alt="NestJS To Do List Application"
+                class="project-img"
+                onclick="openModal(this.src)"
+              />
+            </div>
+            <div class="tech-stack">
+              <img src="./assets/html2.png" alt="HTML" class="tech-icon" title="HTML">
+              <img src="./assets/css.png" alt="CSS" class="tech-icon" title="CSS">
+              <img src="./assets/typescript.png" alt="TypeScript" class="tech-icon" title="TypeScript">
+              <img src="./assets/reactjs.png" alt="React.JS" class="tech-icon" title="React.JS">
+              <img src="./assets/Nestjs.svg" alt="NestJS" class="tech-icon" title="NestJS">
+              <img src="./assets/mongoDB2.svg" alt="MongoDB" class="tech-icon" title="MongoDB">
+              <img src="./assets/nodejs.png" alt="Node.JS" class="tech-icon" title="Node.JS">
+            </div>
+            <h2>NestJS To Do List Application</h2>
+            <div class="btn-container">
+              <button 
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/Jayeeh/basic-library-system', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='404.html'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/PHP-My-Library.png"
+                alt="Library System"
+                class="project-img"
+                onclick="openModal(this.src)"
+              />
+            </div>
+            <div class="tech-stack">
+              <img src="./assets/html2.png" alt="HTML" class="tech-icon" title="HTML">
+              <img src="./assets/css.png" alt="CSS" class="tech-icon" title="CSS">
+              <img src="./assets/bootstrap.png" alt="Bootstrap" class="tech-icon" title="Bootstrap">
+              <img src="./assets/php.png" alt="PHP" class="tech-icon" title="PHP">
+              <img src="./assets/js.png" alt="JavaScript" class="tech-icon" title="JavaScript">
+              <img src="./assets/sql-server.png" alt="SQL" class="tech-icon" title="SQL">
+            </div>
+            <h2>Library System</h2>
+            <div class="btn-container">
+              <button 
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/Jayeeh/basic-library-system', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='404.html'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Express CRUD.png"
+                alt="Travel Blog"
+                class="project-img"
+                onclick="openModal(this.src)"
+              />
+            </div>
+            <div class="tech-stack">
+              <img src="./assets/html2.png" alt="HTML" class="tech-icon" title="HTML">
+              <img src="./assets/css.png" alt="CSS" class="tech-icon" title="CSS">
+              <img src="./assets/nodejs.png" alt="Node.js" class="tech-icon" title="Node.js">
+              <img src="./assets/express.png" alt="Express.js" class="tech-icon" title="Express.js">
+              <img src="./assets/sql-server.png" alt="SQL" class="tech-icon" title="SQL">
+            </div>
+            <h2>Travel Blog</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/Jayeeh/Travel-Experience', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='404.html'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/PokedeX.png"
+                alt="Pokemon Pokedex"
+                class="project-img"
+                onclick="openModal(this.src)"
+              />
+            </div>
+            <div class="tech-stack">
+              <img src="./assets/html2.png" alt="HTML" class="tech-icon" title="HTML">
+              <img src="./assets/css.png" alt="CSS" class="tech-icon" title="CSS">
+              <img src="./assets/js.png" alt="JavaScript" class="tech-icon" title="JavaScript">
+              <img src="./assets/reactjs.png" alt="React.js" class="tech-icon" title="React.js">
+            </div>
+            <h2>Pokemon: Pokedex</h2>
+            <div class="btn-container">
+              <button 
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/Jayeeh/pokedex-update', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://react-pdex.netlify.app/', '_blank')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <img id="modalImage" class="modal-content">
+    </div>
+    <!-- =============================================
+     CONTACT SECTION
+     - Email Contact
+     - Social Media Links
+     - Professional Networks
+     ============================================= -->
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><button id="emailButton" onclick="openContactForm()" class="contact-button">Email Me</button></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://www.linkedin.com/in/errol-justine-casbadillo-295506312/" target="_blank">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/facebook.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://www.facebook.com/erroljustine.casbadillo" target="_blank">Facebook</a></p>
+        </div>
+      </div>
+
+      <!-- Modal Contact Form -->
+      <div id="contactModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Send me a message</h2>
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+     FOOTER SECTION
+     - Navigation Links
+     - Copyright Info
+     ============================================= -->
+
+    <footer>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#profile">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Copyright &#169; 2024 Errol Justine C. Casbadillo. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

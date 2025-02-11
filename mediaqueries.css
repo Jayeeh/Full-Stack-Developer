@@ -1,0 +1,297 @@
+/* ============================================
+   LARGE SCREENS (min-width: 1400px)
+   ============================================ */
+@media screen and (min-width: 1400px) {
+  .section__pic-container {
+    height: 500px;
+    width: 500px;
+  }
+}
+
+/* ============================================
+   LARGE SCREENS (max-width: 1400px)
+   ============================================ */
+@media screen and (max-width: 1400px) {
+  /* Profile Section Adjustments */
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  
+  .section__pic-container {
+    height: 450px;
+    width: 450px;
+  }
+
+  /* About Section Adjustments */
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  
+  /* Contact & Projects Height */
+  #contact,
+  #projects,
+  #certificate {
+    height: fit-content;
+  }
+}
+
+/* ============================================
+   MEDIUM SCREENS (max-width: 1200px)
+   ============================================ */
+@media screen and (max-width: 1200px) {
+  /* Navigation Changes */
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #hamburger-nav .logo img {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  /* Experience Section Adjustments */
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  
+  /* Layout Changes */
+  #profile,
+  .section-container {
+    display: block;
+  }
+  
+  /* Hide Arrow */
+  .arrow {
+    display: none;
+  }
+  
+  /* Section Heights */
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  
+  /* Section Margins */
+  section {
+    margin: 0 5%;
+  }
+  
+  /* Profile Picture Container */
+  .section__pic-container {
+    height: 400px;
+    width: 400px;
+    margin: 0 auto 2rem;
+  }
+  
+  /* About Section Margin */
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+/* ============================================
+   MOBILE SCREENS (max-width: 600px)
+   ============================================ */
+@media screen and (max-width: 600px) {
+  /* Footer & Contact Heights */
+  #contact,
+  footer {
+    height: fit-content;
+  }
+
+  footer {
+    padding: 2rem 0;
+    position: relative;
+  }
+
+  /* Footer Navigation */
+  footer .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  footer .nav-links li {
+    display: inline-block;
+  }
+  
+  footer .nav-links a {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    color: rgb(85, 85, 85);
+    transition: color 0.3s ease;
+  }
+  
+  footer .nav-links a:hover {
+    color: black;
+  }
+  
+  /* Profile Section */
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  
+  /* Text Sizes */
+  article {
+    font-size: 1rem;
+  }
+  
+  /* Container Layouts */
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  
+  /* Contact Info Spacing */
+  .contact-info-container {
+    margin: 0.5rem;
+  }
+  
+  /* Font Sizes */
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  /* Profile Picture */
+  .section__pic-container {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto 2rem;
+  }
+  
+  /* Text Sizes */
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  /* Text Alignment */
+  .text-container {
+    text-align: justify;
+  }
+  
+  /* Mobile Logo */
+  #hamburger-nav .logo img {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Certificate Section */
+
+  .project-img-2 {
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  /* Contact Form Modal */
+  .modal-content {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+
+  .modal h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .form-group textarea {
+    height: 100px;
+  }
+
+  .submit-btn {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .close {
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  /* Email Modal Styles */
+  .modal-content {
+    width: 85%;
+    margin: 0.5rem auto;
+    padding: 1rem;
+    max-width: none;
+    top: 45%;
+  }
+
+  .modal h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.6rem;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.1rem;
+    font-size: 0.8rem;
+  }
+
+  .form-group textarea {
+    height: 80px;
+    min-height: 60px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+}
